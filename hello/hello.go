@@ -4,7 +4,7 @@ package main
 
 import (
 	"fmt"
-	"mygolang/newmath"
+	"github.com/kgori/mygolang/newmath"
 )
 
 func main() {
