@@ -1,4 +1,4 @@
-package rosalindFunctions
+package rosalind
 
 import "fmt"
 

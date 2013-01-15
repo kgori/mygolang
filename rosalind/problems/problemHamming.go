@@ -7,7 +7,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/kgori/mygolang/rosalindFunctions"
+	"github.com/kgori/mygolang/rosalind"
 )
 
 func main() {
@@ -56,6 +56,6 @@ infiniteLoop:
 			break infiniteLoop
 		}
 	}
-	d := rosalindFunctions.Hamming(line1, line2)
+	d := rosalind.Hamming(line1, line2)
 	fmt.Printf("%d\n", d)
 }

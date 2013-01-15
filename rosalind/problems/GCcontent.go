@@ -6,14 +6,14 @@ import (
 	"io"
 	"os"
 
-	"github.com/kgori/mygolang/rosalindFunctions"
+	"github.com/kgori/mygolang/rosalind"
 )
 
 func main() {
 	var currGC float64
 	var bestID string
 	bestGC := 0.0
-	item := rosalindFunctions.NewSequence()
+	item := rosalind.NewSequence()
 
 	f, err := os.Open(os.Args[1])
 	if err != nil {
@@ -22,7 +22,7 @@ func main() {
 	}
 	defer f.Close()
 
-	myFastaReader := rosalindFunctions.NewFastaReader(bufio.NewReader(f))
+	myFastaReader := rosalind.NewFastaReader(bufio.NewReader(f))
 
 infiniteLoop:
 	for {
@@ -33,7 +33,7 @@ infiniteLoop:
 			break infiniteLoop
 
 		default:
-			currGC = rosalindFunctions.GCContent(item.Seq)
+			currGC = rosalind.GCContent(item.Seq)
 			if currGC > bestGC {
 				bestGC = currGC
 				bestID = item.ID

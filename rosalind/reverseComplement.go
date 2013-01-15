@@ -1,4 +1,4 @@
-package rosalindFunctions
+package rosalind
 
 func ReverseComplement(s string) string {
 
